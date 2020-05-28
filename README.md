@@ -4,7 +4,6 @@
 
 ```console
 osmc@osmc:~$ sudo apt update
-osmc@osmc:~$ sudo apt upgrade
 osmc@osmc:~$ echo "deb http://deb.debian.org/debian/ unstable main" | sudo tee --append /etc/apt/sources.list.d/unstable.list
 osmc@osmc:~$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8B48AD6246925553
 osmc@osmc:~$ printf 'Package: *\nPin: release a=unstable\nPin-Priority: 150\n' | sudo tee --append /etc/apt/preferences.d/limit-unstable
@@ -38,7 +37,7 @@ First installation:
 
 ```console
 osmc@osmc:~$ sudo apt update
-osmc@osmc:~$ sudo apt install wireguard-dkms wireguard-tools wireguard
+osmc@osmc:~$ sudo apt install iproute2 resolvconf wireguard-dkms wireguard-tools wireguard
 ```
 
 After updating kernel, repeat `2.` and:
