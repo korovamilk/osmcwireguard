@@ -40,7 +40,8 @@ osmc@osmc:~$ sudo apt update
 osmc@osmc:~$ sudo apt install iproute2 resolvconf wireguard-dkms wireguard-tools wireguard
 ```
 
-After updating kernel, repeat `2.` and:
+
+If you update the kernel, you need to repeat step `2.` and:
 
 ```console
 osmc@osmc:~$ sudo dpkg-reconfigure wireguard-dkms
