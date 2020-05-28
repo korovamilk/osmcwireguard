@@ -9,7 +9,7 @@ osmc@osmc:~$ echo "deb http://deb.debian.org/debian/ unstable main" | sudo tee -
 osmc@osmc:~$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8B48AD6246925553
 osmc@osmc:~$ printf 'Package: *\nPin: release a=unstable\nPin-Priority: 150\n' | sudo tee --append /etc/apt/preferences.d/limit-unstable
 osmc@osmc:~$ sudo perl -pi -e 's/#{1,}?net.ipv4.ip_forward ?= ?(0|1)/net.ipv4.ip_forward = 1/g' /etc/sysctl.conf
-osmc@osmc:~$ sudo reboot
+osmc@osmc:~$ sudo sysctl -p
 ```
 
 Check if IP forwarding is enabled:
